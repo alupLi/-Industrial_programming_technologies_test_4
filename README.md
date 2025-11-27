@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Отчёт по проекту "Галерея изображений"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Краткое описание приложения
+React-приложение "Галерея изображений" - это интерактивная галерея для просмотра набора картинок с возможностью навигации между ними. Приложение имеет элегантный дизайн с тематическим фоном музея.
 
-## Available Scripts
+## Основные возможности
+- Просмотр изображений в крупном формате
+- Переключение между картинками с помощью кнопок "Предыдущая" и "Следующая"
+- Циклическая навигация - после последнего изображения отображается первое
+- Визуальные эффекты при наведении на кнопки
 
-In the project directory, you can run:
+## Особенности реализации
 
-### `npm start`
+### Использованные технологии:
+- **React** с функциональными компонентами
+- **Хук useState** для управления состоянием текущего изображения
+- **CSS3** для стилизации и анимаций
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Ключевые аспекты кода:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```jsx
+// Управление текущим изображением
+const [currentIndex, setCurrentIndex] = useState(0);
 
-### `npm test`
+// Навигация с циклическим переключением
+const handlePrev = () => {
+  setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
+};
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+const handleNext = () => {
+  setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
+};
 
-### `npm run build`
+## Визуальные элементы
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Динамический фон музея** - создает атмосферу художественной галереи
+- **Стилизованные кнопки** с эффектами наведения - плавное изменение цвета и масштаба
+- **Адаптивное расположение элементов** - центрирование контента на странице
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Демонстрация работы приложения
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Скриншот 1: Первое изображение
+![Изображение 1](./screenshots/screenshot1.png)
+*Начальное состояние галереи с первым изображением*
 
-### `npm run eject`
+### Скриншот 2: Второе изображение  
+![Изображение 2](./screenshots/screenshot2.png)
+*Результат нажатия кнопки "Следующая"*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Скриншот 3: Третье изображение
+![Изображение 3](./screenshots/screenshot3.png)
+*Результат повторного нажатия кнопки "Следующая"*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Скриншот 4: Возврат ко второму изображению
+![Изображение 4](./screenshots/screenshot4.png)
+*Результат нажатия кнопки "Предыдущая"*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Выводы
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+В ходе работы успешно разработано React-приложение, демонстрирующее:
 
-## Learn More
+- **Практическое применение React hooks для управления состоянием**
+- **Реализацию интуитивной навигации между элементами** 
+- **Основы современной веб-разработки на React**
+- **Навыки работы с CSS для создания визуально привлекательного интерфейса**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Приложение полностью выполняет поставленную задачу по созданию интерактивной галереи изображений с удобной навигацией.
