@@ -30,6 +30,7 @@ const handlePrev = () => {
 const handleNext = () => {
   setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
 };
+```
 
 ## Визуальные элементы
 
