@@ -36,3 +36,86 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+    background: transparent; /* Make it white if you need */
+    padding: 0 24px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 75px 0;
+}
+
+.App {
+    color: #72a24d;
+}
+
+.main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 50px auto;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.imageContent {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* стиль для кнопки */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    color: white;
+}
+
+.buttonGreen {
+    background-color: #4caf50;
+}
+
+    .buttonGreen:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+    }
+
+.buttonBlue {
+    background-color: #008cba;
+}
+
+    .buttonBlue:hover {
+        background-color: #007bb5;
+        transform: scale(1.05);
+    }
+
+.centered-container {
+    display: flex;
+    justify-content: center; /* по горизонтали */
+    align-items: center; /* по вертикали, если нужно */
+    gap: 20px; /* расстояние между кнопками, по желанию */
+    margin-top: 20px; /* отступ сверху, при необходимости */
+}
